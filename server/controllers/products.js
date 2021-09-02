@@ -7,6 +7,7 @@ const produtos = [
     precoPromo: 90.0,
     categoriaId: 1,
     dataLancamento: '12/31/2000',
+    imagem: './images/bola.png',
   },
   {
     id: 2,
@@ -16,6 +17,7 @@ const produtos = [
     precoPromo: 290.0,
     categoriaId: 2,
     dataLancamento: '07/13/2021',
+    imagem: './images/saia.png',
   },
   {
     id: 3,
@@ -25,6 +27,7 @@ const produtos = [
     precoPromo: 29.99,
     categoriaId: 3,
     dataLancamento: '07/01/2021',
+    imagem: './images/pente.png',
   },
   {
     id: 4,
@@ -34,6 +37,7 @@ const produtos = [
     precoPromo: 50.95,
     categoriaId: 4,
     dataLancamento: '07/01/1996',
+    imagem: './images/tesoura.png',
   },
   {
     id: 5,
@@ -43,6 +47,7 @@ const produtos = [
     precoPromo: 3.79,
     categoriaId: 4,
     dataLancamento: '07/11/2021',
+    imagem: './images/papel.png',
   },
   {
     id: 6,
@@ -52,6 +57,7 @@ const produtos = [
     precoPromo: 3.21,
     categoriaId: 3,
     dataLancamento: '01/31/2020',
+    imagem: './images/locao.png',
   },
   {
     id: 7,
@@ -61,15 +67,17 @@ const produtos = [
     precoPromo: 46.46,
     categoriaId: 2,
     dataLancamento: '01/10/2018',
+    imagem: './images/camisa.png',
   },
   {
     id: 8,
-    titulo: 'Gol de Futebole de Botão',
+    titulo: 'Gol de Futebol de Botão',
     descricao: 'Acompanha rede',
     preco: 64.99,
     precoPromo: 40.99,
     categoriaId: 1,
     dataLancamento: '11/01/2021',
+    imagem: './images/futebolbotao.png',
   },
   {
     id: 9,
@@ -79,6 +87,7 @@ const produtos = [
     precoPromo: 4.06,
     categoriaId: 4,
     dataLancamento: '08/21/2008',
+    imagem: './images/borracha.png',
   },
   {
     id: 10,
@@ -88,6 +97,7 @@ const produtos = [
     precoPromo: 99.99,
     categoriaId: 4,
     dataLancamento: '07/10/2021',
+    imagem: './images/carimbo.png',
   },
 ];
 

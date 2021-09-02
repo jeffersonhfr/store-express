@@ -11,7 +11,7 @@ body {
 
 header{
   background-color: #fff;
-  padding: 20px 30px;
+  padding: 20px 30px 0;
   width: 100%;
   color: #333;
 }
@@ -21,7 +21,7 @@ header a:hover{
 }
 
 .container{
-  padding: 30px 50px;
+  padding: 30px 50px 70px;
 }
 
 .container__head{
@@ -52,13 +52,15 @@ a {
 }
 
 footer{
-  position: absolute;
-  bottom: 0;
   background-color: #333;
   color: #bbb;
   width: 100%;
   padding: 40px;
   text-align: center;
+}
+
+article{
+  margin: 16px 0;
 }
 
 @media (min-width: 550px){
