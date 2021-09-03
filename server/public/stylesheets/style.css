@@ -63,6 +63,21 @@ article{
   margin: 16px 0;
 }
 
+.container__produto{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+
+.container__produto article{
+  width: 31%;
+  margin: 10px 10px;
+}
+
+.imagem__box{
+  text-align: center;
+}
+
 @media (min-width: 550px){
   .container__head{
     flex-flow: row wrap;

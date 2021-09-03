@@ -2,27 +2,31 @@
   <%- include('./partials/header') %>
 
     <main class="container">
-      <h1>Nossos Produtos</h1>
-
-      <% for(let produto of produtos) { %>
-        <article>
-          <img src="<%= produto.imagem %>" alt="Imagem do produto <%= produto.nome %>" width="200px">
-          <h3>
-            <%= produto.titulo %>
-          </h3>
-          <%= produto.descricao %>
-            <p></p>
-            <% if(produto.precoPromo) { %>
-              <p>DE R$ <%= produto.preco %> POR APENAS R$ <%= produto.precoPromo %>
-              </p>
-              <% } else { %>
-                <p>APENAS R$ <%= produto.preco %>
+      <div class="container">
+        <h1>Nossos Produtos</h1>
+      </div>
+      <div class="container__produto">
+        <% for(let produto of produtos) { %>
+          <article>
+            <div class="imagem__box">
+              <img src="<%= produto.imagem %>" alt="Imagem do produto <%= produto.nome %>" height="200px">
+            </div>
+            <h3>
+              <%= produto.titulo %>
+            </h3>
+            <%= produto.descricao %>
+              <p></p>
+              <% if(produto.precoPromo) { %>
+                <p>DE R$ <%= produto.preco %> POR APENAS R$ <%= produto.precoPromo %>
                 </p>
-                <% } %>
-                  <a href="" class="btn">Ver detalhes</a>
-        </article>
-        <% } %>
-
+                <% } else { %>
+                  <p>APENAS R$ <%= produto.preco %>
+                  </p>
+                  <% } %>
+                    <a href="" class="btn">Ver detalhes</a>
+          </article>
+          <% } %>
+      </div>
     </main>
 
     <%- include('./partials/footer') %>
