@@ -1,6 +1,6 @@
 const produtos = [
   {
-    id: 1,
+    id: 0,
     titulo: 'Bola de Futebol',
     descricao: 'Bola tipo dente de leite',
     preco: 190.0,
@@ -10,7 +10,7 @@ const produtos = [
     imagem: './images/bola.png',
   },
   {
-    id: 2,
+    id: 1,
     titulo: 'Saia Justa',
     descricao: 'Atenção - laceia após primeira lavagem',
     preco: 290.01,
@@ -18,6 +18,16 @@ const produtos = [
     categoriaId: 2,
     dataLancamento: '07/13/2021',
     imagem: './images/saia.png',
+  },
+  {
+    id: 2,
+    titulo: 'Carimbo "TOP SECRET"',
+    descricao: 'Acompanha estojo e tinta vermelha',
+    preco: 100.0,
+    precoPromo: 99.99,
+    categoriaId: 4,
+    dataLancamento: '07/10/2021',
+    imagem: './images/carimbo.png',
   },
   {
     id: 3,
@@ -89,16 +99,6 @@ const produtos = [
     dataLancamento: '08/21/2008',
     imagem: './images/borracha.png',
   },
-  {
-    id: 10,
-    titulo: 'Carimbo "TOP SECRET"',
-    descricao: 'Acompanha estojo e tinta vermelha',
-    preco: 100.0,
-    precoPromo: 99.99,
-    categoriaId: 4,
-    dataLancamento: '07/10/2021',
-    imagem: './images/carimbo.png',
-  },
 ];
 
 const controller = {
@@ -107,6 +107,41 @@ const controller = {
       produtos,
       titulo: '.Com',
       subtitulo: 'Confira nossas ofertas',
+      galeria: true,
+    });
+  },
+  show: (req, res, next) => {
+    const { id, titulo, descricao, preco, precoPromo, categoriaId, dataLancamento  } = req.params;
+    res.render('produtos', {
+      titulo: '.Com',
+      subtitulo: 'Confira nossas ofertas',
+      produtos:produtos[id],
+      galeria: false,
+    });
+  },
+  add: (req, res, next) => {
+    const { id, titulo, descricao, preco, precoPromo, categoriaId, dataLancamento  } = req.params;
+    res.render('adicionar', {
+      titulo: '.Com',
+      subtitulo: 'Confira nossas ofertas',
+    });
+  },
+  edit: (req, res, next) => {
+    const { id, titulo, descricao, preco, precoPromo, categoriaId, dataLancamento  } = req.params;
+    res.render('editar', {
+      titulo: '.Com',
+      subtitulo: 'Confira nossas ofertas',
+      produtos:produtos[id],
+      galeria: false,
+    });
+  },
+  delete: (req, res, next) => {
+    const { id, titulo, descricao, preco, precoPromo, categoriaId, dataLancamento  } = req.params;
+    res.render('deletar', {
+      titulo: '.Com',
+      subtitulo: 'Confira nossas ofertas',
+      produtos:produtos[id],
+      galeria: false,
     });
   },
 };
