@@ -1,0 +1,32 @@
+<%- include('./partials/head') %>
+  <%- include('./partials/header') %>
+
+    <main class="container">
+      <div class="container">
+        <h1>Adicione novos produtos</h1>
+      </div>
+      <div class="container__form">
+        <form class="form__produtos" action="/produtos/adicionar" method="post">
+          <label>Informe o ID do seu produto</label>
+          <input type="text" id="id" name="id" placeholder="Id do Produto">
+          <label>Informe o ID da categoria</label>
+          <input type="number" id="categoriaId" name="categoriaId" placeholder="Id da categoria">
+          <label>Adicione um título ao seu produto</label>
+          <input type="text" id="titulo" name="titulo" placeholder="Título">
+          <label>Adicione uma descricao ao seu produto</label>
+          <textarea id="descricao" name="descricao" placeholder="Descrição" rows="10" cols="50">Descreva as características do seu produto</textarea>
+          <label>Adicione o valor do seu produto</label>
+          <input type="number" id="preco" name="preco" placeholder="Preço regular">
+          <label>Adicione o valor atual promocionado, caso esteja em promoção</label>
+          <input type="number" id="precoPromo" name="precoPromo" placeholder="Preço Promocional">
+          <label>Data do Lançamento</label>
+          <input type="date" id="dataLancamento" name="dataLancamento" placeholder="Data Lançamento">
+          <label>Adicione a foto do seu produto</label>
+          <input type="file" id="image" name="image" placeholder="Data Lançamento">
+          <input type="submit" value="Enviar" class="submit">
+
+        </form>
+      </div>
+    </main>
+
+    <%- include('./partials/footer') %>
