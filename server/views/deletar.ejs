@@ -5,55 +5,8 @@
       <div class="container">
         <h1>Nossos Produtos</h1>
       </div>
-      <div class="container__produto">
-        <% if(locals.galeria) {%>
-
-          <% for(let produto of produtos) { %>
-            <article>
-              <div class="imagem__box">
-                <img src="../<%= produto.imagem %>" alt="Imagem do produto <%= produto.nome %>" height="200px">
-              </div>
-              <h3>
-                <%= produto.titulo %>
-              </h3>
-              <%= produto.descricao %>
-                <p></p>
-                <% if(produto.precoPromo) { %>
-                  <p>DE R$ <%= produto.preco %> POR APENAS R$ <%= produto.precoPromo %>
-                  </p>
-                  <% } else { %>
-                    <p>APENAS R$ <%= produto.preco %>
-                    </p>
-                    <% } %>
-                      <% if(galeria) {%>
-                        <a href="./<%= produto.id %>" class="btn">Ver detalhes</a>
-                        <% } %>
-            </article>
-            <% } %>
-
-              <% } else { %>
-
-                <article>
-                  <div class="imagem__box">
-                    <img src="../<%= produtos.imagem %>" alt="Imagem do produto <%= produtos.nome %>" height="200px">
-                  </div>
-                  <h3>
-                    <%= produtos.titulo %>
-                  </h3>
-
-                  <p></p>
-                  <% if(produtos.precoPromo) { %>
-                    <p>DE R$ <%= produtos.preco %> POR APENAS R$ <%= produtos.precoPromo %>
-                    </p>
-                    <% } else { %>
-                      <p>APENAS R$ <%= produtos.preco %>
-                      </p>
-                      <% } %>
-                        <a href="." class="btn">Voltar</a>
-
-                </article>
-
-                <% } %>
+      <div class="container__produto__excluido">
+        Produto excluído
       </div>
     </main>
 

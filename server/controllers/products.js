@@ -156,7 +156,7 @@ const controller = {
     const { id, titulo, descricao, preco, precoPromo, categoriaId, dataLancamento, imagem } = req.params;
     res.render('atualizar', {
       titulo: '.Com',
-      subtitulo: 'Editar Dados',
+      subtitulo: 'Confira os Dados',
       produtoEditado: {
         id: req.body.id,
         titulo: req.body.titulo,
@@ -169,13 +169,22 @@ const controller = {
       }
     });
   },
-  delete: (req, res, next) => {
-    const { id, titulo, descricao, preco, precoPromo, categoriaId, dataLancamento  } = req.params;
+  deletarProduto: (req, res, next) => {
+    let { id, titulo, descricao, preco, precoPromo, categoriaId, dataLancamento  } = req.params;
+    // res.send('Estou deletando ' + id);
     res.render('deletar', {
       titulo: '.Com',
-      subtitulo: 'Confira nossas ofertas',
-      produtos:produtos[id],
-      galeria: false,
+      subtitulo: 'Deletando Produto',
+      produtoDeletado: {
+        id: req.body.id,
+        titulo: req.body.titulo,
+        descricao: req.body.descricao,
+        preco: req.body.preco,
+        precoPromo: req.body.precoPromo,
+        categoriaId: req.body.categoriaId,
+        dataLancamento: req.body.dataLancamento,
+        imagem: req.body.imagem,
+      }
     });
   },
 };

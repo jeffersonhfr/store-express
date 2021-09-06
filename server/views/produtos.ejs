@@ -26,7 +26,8 @@
 
               <% } else { %>
                 <article>
-                  <div class="edit__produto"><a href="<%= produtos.id %>/editar"> Editar Produto</a> | <a href="<%= produtos.id %>/delete">Deletar Produto</a></div>
+                  <div class="edit__produto"><a href="<%= produtos.id %>/editar" class="btn-editar"> Editar Produto</a> | <form action="/produtos/deletar/<%= produtos.id %>?_method=DELETE" method="post" style="display: inline-block;"><input type="submit" class="btn" value="Deletar Produto"></form>
+                  </div>
                   <div <div class="imagem__box">
                     <img src="../<%= produtos.imagem %>" alt="Imagem do produto <%= produtos.nome %>" height="200px">
                   </div>

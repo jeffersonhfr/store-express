@@ -26,6 +26,17 @@ header a:hover{
   padding: 30px 50px;
 }
 
+input.btn {
+  border: 0;
+  background-color: transparent;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+input.btn:hover, .btn-editar:hover {
+  color:red;
+}
+
 .container__head{
   display: flex;
   justify-content: center;
@@ -140,6 +151,11 @@ a.btn {
 .itens__produtos{
   margin-top: 15px;
 }
+
+.container__produto__excluido{
+  padding: 0 50px;
+}
+
 @media (min-width: 550px){
   .container__head{
     flex-flow: row wrap;
