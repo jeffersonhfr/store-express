@@ -3,57 +3,23 @@
 
     <main class="container">
       <div class="container">
-        <h1>Nossos Produtos</h1>
+        <h1>Editar produto: <%= produtos.titulo %>
+        </h1>
       </div>
-      <div class="container__produto">
-        <% if(locals.galeria) {%>
-
-          <% for(let produto of produtos) { %>
-            <article>
-              <div class="imagem__box">
-                <img src="../<%= produto.imagem %>" alt="Imagem do produto <%= produto.nome %>" height="200px">
-              </div>
-              <h3>
-                <%= produto.titulo %>
-              </h3>
-              <%= produto.descricao %>
-                <p></p>
-                <% if(produto.precoPromo) { %>
-                  <p>DE R$ <%= produto.preco %> POR APENAS R$ <%= produto.precoPromo %>
-                  </p>
-                  <% } else { %>
-                    <p>APENAS R$ <%= produto.preco %>
-                    </p>
-                    <% } %>
-                      <% if(galeria) {%>
-                        <a href="./<%= produto.id %>" class="btn">Ver detalhes</a>
-                        <% } %>
-            </article>
-            <% } %>
-
-              <% } else { %>
-
-                <article>
-                  <div class="imagem__box">
-                    <img src="../<%= produtos.imagem %>" alt="Imagem do produto <%= produtos.nome %>" height="200px">
-                  </div>
-                  <h3>
-                    <%= produtos.titulo %>
-                  </h3>
-
-                  <p></p>
-                  <% if(produtos.precoPromo) { %>
-                    <p>DE R$ <%= produtos.preco %> POR APENAS R$ <%= produtos.precoPromo %>
-                    </p>
-                    <% } else { %>
-                      <p>APENAS R$ <%= produtos.preco %>
-                      </p>
-                      <% } %>
-                        <a href="." class="btn">Voltar</a>
-
-                </article>
-
-                <% } %>
+      <div class="container__form">
+        <form class="form__produtos" action="/produtos/editar?_method=put" method="post">
+          <label>Adicione um título ao seu produto</label>
+          <input type="text" id="titulo" name="titulo" value="<%= produtos.titulo %>">
+          <label>Adicione uma descricao ao seu produto</label>
+          <textarea id="descricao" name="descricao" value="<%= produtos.descricao %>" rows="10" cols="50"><%= produtos.descricao %></textarea>
+          <label>Adicione o valor do seu produto</label>
+          <input type="number" id="preco" name="preco" value="<%= produtos.preco %>">
+          <label>Adicione o valor atual promocionado, caso esteja em promoção</label>
+          <input type="number" id="precoPromo" name="precoPromo" value="<%= produtos.precoPromo %>">
+          <label>Data do Lançamento</label>
+          <input type="text" id="dataLancamento" name="dataLancamento" value="<%= produtos.dataLancamento %>">
+          <input type="submit" value="Alterar" class="submit">
+        </form>
       </div>
     </main>
 

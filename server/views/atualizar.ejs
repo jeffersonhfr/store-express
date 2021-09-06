@@ -3,46 +3,46 @@
 
     <main class="container">
       <div class="container">
-        <h2>Produto adicionado com sucesso.</h2>
-        <h4> Confira as informações abaixo:</h4>
+        <h2>Produto Editado com sucesso.</h2>
+        <h4> Confira as novas informações abaixo:</h4>
       </div>
       <div class="container__atualizar__form">
 
         <div class="itens__produtos">
           <h3>Nome do produto:</h3>
           <p>
-            <%= produtoAdicionado.titulo %>
+            <%= produtoEditado.titulo %>
           </p>
         </div>
 
         <div class="itens__produtos">
           <h3>Descricao do produto: </h3>
           <p>
-            <%= produtoAdicionado.descricao %>
+            <%= produtoEditado.descricao %>
           </p>
         </div>
 
         <div class="itens__produtos">
           <h3>Preço:</h3>
           <p>
-            <%= produtoAdicionado.preco %>
+            <%= produtoEditado.preco %>
           </p>
         </div>
 
         <div class="itens__produtos">
           <h3>Preço Promoção:</h3>
           <p>
-            <%= produtoAdicionado.precoPromo %>
+            <%= produtoEditado.precoPromo %>
           </p>
         </div>
 
         <div class="itens__produtos">
           <h3>Data do Lançamento:</h3>
           <p>
-            <%= produtoAdicionado.dataLancamento %>
+            <%= produtoEditado.dataLancamento %>
           </p>
         </div>
-
+        <a href="javascript:history.go(-1)" class="btn">Corrigir</a>
       </div>
     </main>
 

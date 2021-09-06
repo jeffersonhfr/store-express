@@ -16,40 +16,31 @@
               <h3>
                 <%= produto.titulo %>
               </h3>
-              <%= produto.descricao %>
-                <p></p>
-                <% if(produto.precoPromo) { %>
-                  <p>DE R$ <%= produto.preco %> POR APENAS R$ <%= produto.precoPromo %>
-                  </p>
-                  <% } else { %>
-                    <p>APENAS R$ <%= produto.preco %>
-                    </p>
-                    <% } %>
-                      <% if(galeria) {%>
-                        <a href="./<%= produto.id %>" class="btn">Ver detalhes</a>
-                        <% } %>
+              <p>DE R$ <%= produto.preco %> | POR APENAS R$ <%= produto.precoPromo %>
+              </p>
+              <% if(galeria) {%>
+                <a href="./<%= produto.id %>" class="btn">Ver detalhes</a>
+                <% } %>
             </article>
             <% } %>
 
               <% } else { %>
-
                 <article>
-                  <div class="imagem__box">
+                  <div class="edit__produto"><a href="<%= produtos.id %>/editar"> Editar Produto</a> | <a href="<%= produtos.id %>/delete">Deletar Produto</a></div>
+                  <div <div class="imagem__box">
                     <img src="../<%= produtos.imagem %>" alt="Imagem do produto <%= produtos.nome %>" height="200px">
                   </div>
                   <h3>
                     <%= produtos.titulo %>
                   </h3>
+                  <p>
+                    <%= produtos.descricao %>
+                  </p><br><br>
 
-                  <p></p>
-                  <% if(produtos.precoPromo) { %>
-                    <p>DE R$ <%= produtos.preco %> POR APENAS R$ <%= produtos.precoPromo %>
-                    </p>
-                    <% } else { %>
-                      <p>APENAS R$ <%= produtos.preco %>
-                      </p>
-                      <% } %>
-                        <a href="." class="btn">Voltar</a>
+                  <p><b>DE R$ <%= produtos.preco %> | POR APENAS R$ <%= produtos.precoPromo %>
+                    </b></p>
+
+                  <a href="." class="btn">Voltar</a>
 
                 </article>
 

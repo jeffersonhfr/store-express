@@ -6,8 +6,10 @@ var productsController = require('../controllers/products');
 router.get('/', productsController.index);
 router.get('/adicionar', productsController.addProduct);
 router.post('/adicionar', productsController.guardarProduto);
-router.get('/:id?', productsController.show);
-router.get('/:id/edit', productsController.edit);
-router.get('/:id/delete', productsController.delete);
+router.get('/:id', productsController.show);
+router.get('/:id/editar', productsController.edit);
+router.put('/editar', productsController.atualizar);
+router.put('/:id/atualizar', productsController.atualizar);
+router.get('/:id/deletar', productsController.delete);
 
 module.exports = router;

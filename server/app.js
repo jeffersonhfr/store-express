@@ -9,6 +9,7 @@ var usersRouter = require('./routes/users');
 var productsRouter = require('./routes/products');
 var aboutRouter = require('./routes/about');
 var contactRouter = require('./routes/contact');
+var methodOverride = require('method-override');
 
 var app = express();
 
@@ -21,6 +22,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(methodOverride('_method'));
 
 app.use('/', indexRouter);
 app.use('/usuarios', usersRouter);
